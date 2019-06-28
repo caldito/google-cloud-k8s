@@ -8,7 +8,7 @@ before_install:
 script:
   - docker run caldito99/react-test npm test -- --coverage
 
-afeter_success:
+after_success:
   - docker build -t caldito99/multi-client ./client
   - docker build -t caldito99/multi-nginx ./nginx
   - docker build -t caldito99/multi-server ./server
