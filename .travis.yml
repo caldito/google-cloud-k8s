@@ -20,3 +20,15 @@ after_success:
   - docker push caldito99/multi-nginx
   - docker push caldito99/multi-server
   - docker push caldito99/multi-worker
+deploy:
+  provider: elasticbeanstack
+  region: us-west-2
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-us-west-2-161067368138
+  bucker_path: docker_multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
