@@ -1,6 +1,6 @@
 {
     "AWSEBDockerrunVersion": 2,
-    "containerDerinitions": [
+    "containerDefinitions": [
         {
             "name":"client",
             "image":"caldito99/multi-client",
