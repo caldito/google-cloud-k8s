@@ -21,7 +21,7 @@ after_success:
   - docker push caldito99/multi-server
   - docker push caldito99/multi-worker
 deploy:
-  provider: elasticbeanstack
+  provider: elasticbeanstalk
   region: us-west-2
   app: multi-docker
   env: MultiDocker-env
