@@ -1,9 +1,9 @@
-docker build -t caldito99/multi-client:latest -f ./multi-client/Dockerfile ./client
-docker build -t caldito99/multi-client:$SHA -f ./multi-client/Dockerfile ./client
-docker build -t caldito99/multi-server:latest -f ./multi-server/Dockerfile ./server
-docker build -t caldito99/multi-server:$SHA -f ./multi-server/Dockerfile ./server
-docker build -t caldito99/multi-worker:latest -f ./multi-worker/Dockerfile ./worker
-docker build -t caldito99/multi-worker:$SHA -f ./multi-worker/Dockerfile ./worker
+docker build -t caldito99/multi-client:latest -f ./client/Dockerfile ./client
+docker build -t caldito99/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t caldito99/multi-server:latest -f ./server/Dockerfile ./server
+docker build -t caldito99/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t caldito99/multi-worker:latest -f ./worker/Dockerfile ./worker
+docker build -t caldito99/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push caldito99 multi-client:latest
 docker push caldito99 multi-client:$SHA
